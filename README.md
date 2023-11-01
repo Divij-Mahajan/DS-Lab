@@ -1,4 +1,6 @@
-# Programs
+# # Programs
+# Divij Mahajan
+# 2K22/CO/171
 1. Take input 2d array : marks in 5 subjects calculate total of every student and average of every subject
 2. palindrome check
 3. insertion and deletion in array at user defined location
