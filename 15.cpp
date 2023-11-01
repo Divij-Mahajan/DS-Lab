@@ -82,47 +82,6 @@ SparseMatrix addMatrices(const SparseMatrix& mat1, const SparseMatrix& mat2) {
 
     return result;
 }
-// SparseMatrix addMatrices(const SparseMatrix& mat1, const SparseMatrix& mat2) {
-//     if (mat1.rows != mat2.rows || mat1.cols != mat2.cols) {
-//         cerr << "Matrix dimensions do not match for addition." << endl;
-//         exit(EXIT_FAILURE);
-//     }
-
-//     SparseMatrix result(mat1.rows, mat1.cols);
-
-//     int i = 0, j = 0;
-
-//     while (i < mat1.elements.size() && j < mat2.elements.size()) {
-//         const Element& elem1 = mat1.elements[i];
-//         const Element& elem2 = mat2.elements[j];
-
-//         if (elem1.row < elem2.row || (elem1.row == elem2.row && elem1.col < elem2.col)) {
-//             result.addElement(elem1.row, elem1.col, elem1.value);
-//             ++i;
-//         } else if (elem2.row < elem1.row || (elem1.row == elem2.row && elem2.col < elem1.col)) {
-//             result.addElement(elem2.row, elem2.col, elem2.value);
-//             ++j;
-//         } else {
-//             result.addElement(elem1.row, elem1.col, elem1.value + elem2.value);
-//             ++i;
-//             ++j;
-//         }
-//     }
-
-//     while (i < mat1.elements.size()) {
-//         const Element& elem1 = mat1.elements[i];
-//         result.addElement(elem1.row, elem1.col, elem1.value);
-//         ++i;
-//     }
-
-//     while (j < mat2.elements.size()) {
-//         const Element& elem2 = mat2.elements[j];
-//         result.addElement(elem2.row, elem2.col, elem2.value);
-//         ++j;
-//     }
-
-//     return result;
-// }
 
 int main() {
     cout << "Enter details for the first sparse matrix:" << endl;

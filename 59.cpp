@@ -12,7 +12,6 @@ struct AVLNode {
     AVLNode(int value) : data(value), left(nullptr), right(nullptr), height(1) {}
 };
 
-template <typename T>
 class AVLTree {
 private:
     AVLNode* root;
@@ -153,7 +152,7 @@ public:
 };
 
 int main() {
-    AVLTree<int> avlTree;
+    AVLTree avlTree;
     avlTree.insert(10);
     avlTree.insert(20);
     avlTree.insert(30);
